@@ -36,7 +36,7 @@ class AdapterHouses(context: Context,arrayListDetails:ArrayList<ModelHouses>) : 
             val view: View?
             val listRowHolder: ListRowHolder
             if (convertView == null) {
-                view = this.layoutInflater.inflate(R.layout.adapter_layout, parent, false)
+                view = this.layoutInflater.inflate(R.layout.adapter_layout_houses, parent, false)
                 listRowHolder = ListRowHolder(view)
                 view.tag = listRowHolder
             } else {
