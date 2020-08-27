@@ -44,10 +44,11 @@ class AdapterHouses(context: Context,arrayListDetails:ArrayList<ModelHouses>) : 
                 listRowHolder = view.tag as ListRowHolder
             }
             listRowHolder.tvName.text = arrayListDetails.get(position).name
-            listRowHolder.tvMascot.text = arrayListDetails.get(position).mascot
+            listRowHolder.tvMascot.text = "Mascot "+arrayListDetails.get(position).mascot
             listRowHolder.tvId.text = arrayListDetails.get(position).id
-            //Glide.with(this.layoutInflater.context).load(arrayListDetails.get(position).thumbnail).into(listRowHolder.thumbnail);
-
+            listRowHolder.tvHead.text = "Head "+arrayListDetails.get(position).headOfHouse
+            listRowHolder.tvGhost.text = "House Ghost "+arrayListDetails.get(position).houseGhost
+            listRowHolder.tvFounder.text = "Founder "+arrayListDetails.get(position).founder
             return view
         }
     }
@@ -56,6 +57,9 @@ class AdapterHouses(context: Context,arrayListDetails:ArrayList<ModelHouses>) : 
          val tvName: TextView
          val tvMascot: TextView
          val tvId: TextView
+         val tvHead: TextView
+         val tvFounder: TextView
+         val tvGhost: TextView
          val thumbnail: ImageView
          val linearLayout: LinearLayout
 
@@ -64,6 +68,9 @@ class AdapterHouses(context: Context,arrayListDetails:ArrayList<ModelHouses>) : 
             this.tvName = row?.findViewById(R.id.tvName) as TextView
             this.tvMascot = row?.findViewById(R.id.tvMascot) as TextView
             this.thumbnail = row?.findViewById(R.id.thumbnail) as ImageView
+            this.tvHead = row?.findViewById(R.id.tvhead) as TextView
+            this.tvFounder = row?.findViewById(R.id.tvFounder) as TextView
+            this.tvGhost = row?.findViewById(R.id.tvGhost) as TextView
             this.linearLayout = row?.findViewById(R.id.linearLayout) as LinearLayout
         }
     }

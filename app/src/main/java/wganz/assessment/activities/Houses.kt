@@ -61,6 +61,10 @@ class Houses : AppCompatActivity() {
                     model.id=json_objectdetail.getString("_id")
                     model.name=json_objectdetail.getString("name")
                     model.mascot=json_objectdetail.getString("mascot")
+                    model.headOfHouse=json_objectdetail.getString("headOfHouse")
+                    model.houseGhost=json_objectdetail.getString("houseGhost")
+//                    model.school=json_objectdetail.getString("school")
+                    model.founder=json_objectdetail.getString("founder")
                      arrayList_details.add(model)
                 }
 
@@ -94,7 +98,7 @@ class Houses : AppCompatActivity() {
             // positive button text and action
             .setPositiveButton("RETRY", DialogInterface.OnClickListener {
                     dialog, id -> finish()
-                run("https://www.themealdb.com/api/json/v1/1/categories.php")
+                run("https://www.potterapi.com/v1/houses/?key=$2a$10$1JEnmtEF417yBaFZcr51qukRjaKv8d5toEG5DKP/IUZWIVwfsaF7y")
             })
             // negative button text and action
             .setNegativeButton("CLOSE", DialogInterface.OnClickListener {
