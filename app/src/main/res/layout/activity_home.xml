@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activities.Houses">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:gravity="center_horizontal"
+      android:orientation="vertical">
+   <androidx.cardview.widget.CardView
+       android:id="@+id/thumbnailCardView"
+       android:layout_width="100dp"
+       android:layout_height="100dp"
+       android:layout_marginTop="100dp"
+       android:layout_centerHorizontal="true"
+       app:cardCornerRadius="50dp">
+
+      <ImageView
+          android:id="@+id/thumbnail"
+          android:layout_width="100dp"
+          android:layout_height="100dp"
+          android:layout_gravity="start"
+          android:src="@mipmap/ic_launcher" />
+   </androidx.cardview.widget.CardView>
+
+   <Button
+       android:id="@+id/houses"
+       android:layout_width="300dp"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="100dp"
+       android:background="@drawable/button"
+       android:text="@string/houses" />
+
+   <Button
+       android:id="@+id/spells"
+       android:layout_width="300dp"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="20dp"
+       android:background="@drawable/button"
+       android:text="@string/spells" />
+
+      <Button
+          android:id="@+id/students"
+          android:layout_width="300dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"
+          android:background="@drawable/button"
+          android:text="@string/students" />
+   </LinearLayout>
+</RelativeLayout>

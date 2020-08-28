@@ -20,11 +20,15 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_margin="5dp"
+        android:layout_marginLeft="@dimen/medium"
+        android:layout_marginStart="@dimen/medium"
         android:textColor="@color/colorPrimaryDark"/>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/medium"
+        android:layout_marginStart="@dimen/medium">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/thumbnailCardView"
