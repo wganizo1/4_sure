@@ -7,6 +7,7 @@ import android.content.DialogInterface
 import android.net.ConnectivityManager
 import android.net.NetworkInfo
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ListView
@@ -61,7 +62,7 @@ class Students : AppCompatActivity() {
                     var json_objectdetail:JSONObject=jsonArray.getJSONObject(i)
                     var model:ModelStudents= ModelStudents();
                      model.id = json_objectdetail.getString("_id")
-                        model.name = json_objectdetail.getString("name")
+                     model.name = json_objectdetail.getString("name")
                      arrayList_details.add(model)
                 }
 
@@ -71,7 +72,7 @@ class Students : AppCompatActivity() {
                     obj_adapter = AdapterStudents(applicationContext,arrayList_details)
                     listView_details.adapter=obj_adapter
                     listView_details.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
-                        Toast.makeText(applicationContext,arrayList_details.get(position).name,Toast.LENGTH_SHORT).show()
+                    details(arrayList_details.get(position).name)
                     }
                     progress.visibility = View.GONE
                 }
@@ -109,5 +110,14 @@ class Students : AppCompatActivity() {
         alert.setTitle("Error!!")
         // show alert dialog
         alert.show()
+    }
+    private fun details(name: String) {
+        AlertDialog.Builder(this)
+            .setTitle(name)
+            .setMessage("")
+            .setPositiveButton("OK") { dialog, which ->
+               dialog.dismiss()
+            }
+            .show()
     }
 }
